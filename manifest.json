@@ -1,0 +1,23 @@
+
+{
+  "manifest_version": 3,
+  "name": "Netflix Intro Skipper",
+  "version": "1.0",
+  "description": "Automatically skips intros on Netflix.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.netflix.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
